@@ -19,7 +19,7 @@
 
 ## 📸 Screenshots
 
-> **Tip:** Replace the placeholder paths below with your actual screenshots.
+
 
 | Login Screen | Home / Dashboard | New Entry |
 |:---:|:---:|:---:|
