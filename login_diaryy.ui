@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>login_diaryy</class>
+ <widget class="QMainWindow" name="login_diaryy">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MemoVault</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ═══ MAIN WINDOW BACKGROUND — Linear Gradient ═══ */
+QMainWindow {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 #1a3a2e,
+        stop:0.4 #2d6b4f,
+        stop:1 #0f2419
+    );
+}
+
+QWidget#centralwidget {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:1,
+        stop:0 #1a3a2e,
+        stop:0.35 #2d6b4f,
+        stop:0.7 #3a8a60,
+        stop:1 #0f2419
+    );
+}
+
+/* ═══ WELCOME LABEL ═══ */
+QLabel#welcome {
+    color: #AAFFC7;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: &quot;Georgia&quot;;
+    letter-spacing: 1px;
+    background: transparent;
+}
+
+/* ═══ WRITE DIARY LABEL ═══ */
+QLabel#write_diary{
+    color: #AAFFC7;
+    font-size: 20px;
+    font-family: &quot;Palatino Linotype&quot;;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    background: transparent;
+}
+
+/* ═══ TEXT EDIT ═══ */
+QTextEdit#textEdit {
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 2px solid #AAFFC7;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 13px;
+  font-weight: bold;
+    font-family: &quot;Segoe UI&quot;;
+    color: #1a3a2a;
+    selection-background-color: #AAFFC7;
+}
+
+QTextEdit#textEdit:focus {
+    border: 4px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0.97);
+}
+
+/* ═══ SAVE BUTTON ═══ */
+QPushButton#save_btn {
+    background: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #AAFFC7,
+        stop:1 #5ecb8a
+    );
+    color: #0f2419;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: &quot;Segoe UI&quot;;
+    font-weight: bold;
+    letter-spacing: 1px;
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 38px;
+}
+
+QPushButton#save_btn:hover {
+    background: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #c5ffe0,
+        stop:1 #AAFFC7
+    );
+    color: #0a1f12;
+}
+
+QPushButton#save_btn:pressed {
+    background-color: #7ad4a8;
+    color: #0f2419;
+}
+
+/* ═══ MENU BAR ═══ */
+QMenuBar {
+    background: qlineargradient(
+        x1:0, y1:0, x2:1, y2:0,
+        stop:0 #0f2419,
+        stop:1 #1a3a2e
+    );
+    color: #AAFFC7;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 6px;
+    border-bottom: 1px solid #AAFFC7;
+}
+
+QMenuBar::item {
+    padding: 5px 14px;
+    background: transparent;
+    border-radius: 4px;
+}
+
+QMenuBar::item:selected {
+    background-color: rgba(170, 255, 199, 0.2);
+    color: #ffffff;
+}
+
+QMenu {
+    background: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1a3a2e,
+        stop:1 #0f2419
+    );
+    border: 1px solid #AAFFC7;
+    border-radius: 6px;
+    color: #AAFFC7;
+    font-family: &quot;Segoe UI&quot;;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 6px 20px;
+    border-radius: 4px;
+}
+
+QMenu::item:selected {
+    background-color: rgba(170, 255, 199, 0.25);
+    color: #ffffff;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QLabel" name="welcome">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>50</y>
+      <width>661</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Welcome to secure Digital Diary System</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="write_diary">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>150</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Write your personal diary here:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>190</y>
+      <width>431</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="save_btn">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>400</y>
+      <width>150</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar {
+    background-color: #3a7030;
+    color: white;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 13px;
+    padding: 3px;
+}
+
+QMenuBar::item:selected {
+    background-color: #5a9e4f;
+    border-radius: 4px;
+}
+
+QMenu {
+    background-color: #f0f4f0;
+    border: 1px solid #6aab5e;
+    color: #1e3d1a;
+}
+
+QMenu::item:selected {
+    background-color: #a8d5a2;
+    color: #1e3d1a;
+}</string>
+   </property>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionCopy"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+   </widget>
+   <widget class="QMenu" name="menuRead">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuNew">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_2"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionClose"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_As"/>
+   </widget>
+   <addaction name="menuNew"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuRead"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionNew_2">
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="text">
+    <string>Save As</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::EditCopy"/>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::EditCut"/>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::EditPaste"/>
+   </property>
+   <property name="text">
+    <string>Paste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::EditUndo"/>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="icon">
+    <iconset theme="QIcon::ThemeIcon::EditRedo"/>
+   </property>
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionFont_Style">
+   <property name="text">
+    <string>Font Style</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

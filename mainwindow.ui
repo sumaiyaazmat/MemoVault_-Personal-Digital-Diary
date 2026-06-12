@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>721</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* =========================
+   MAIN WINDOW - DARK GREEN BACKGROUND
+========================= */
+QMainWindow {
+    background-color: #1a4a2e;
+}
+
+QWidget {
+    background-color: #1a4a2e;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+}
+
+/* =========================
+   TITLE LABEL - MEMOVAULT
+========================= */
+QLabel#titleLabel {
+    font-size: 42px;
+
+    font-weight: bold;
+    color: #EFFFF6;
+    padding: 8px 0px;
+    background: transparent;
+    qproperty-alignment: AlignCenter;
+}
+
+/* =========================
+   FIELD LABELS - Username / Password
+========================= */
+QLabel#usernameLabel,
+QLabel#passwordLabel {
+    color: rgba(200, 240, 220, 0.85);
+    font-size: 13px;
+    font-weight: 500;
+    background: transparent;
+    padding-left: 2px;
+}
+
+/* General label fallback */
+QLabel {
+    color: rgba(200, 240, 220, 0.85);
+    font-size: 13px;
+    background: transparent;
+}
+
+/* =========================
+   INPUT FIELDS - WHITE ROUNDED
+========================= */
+QLineEdit {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    background-color: rgba(235, 250, 240, 0.95);
+    color: #1b3b2a;
+    font-size: 14px;
+    selection-background-color: #6EE7A8;
+}
+
+QLineEdit:focus {
+    border: 2px solid #6EE7A8;
+    background-color: #ffffff;
+    outline: none;
+}
+
+/* =========================
+   LOGIN BUTTON - GREEN PILL
+========================= */
+QPushButton#login_btn {
+    background-color: #5DD898;
+    color: #0a1f12;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    min-height: 44px;
+    letter-spacing: 0.5px;
+}
+
+QPushButton#login_btn:hover {
+    background-color: #7EEDB0;
+}
+
+QPushButton#login_btn:pressed {
+    background-color: #3DC47E;
+}
+
+/* =========================
+   SHOW PASSWORD BUTTON - INSIDE FIELD
+========================= */
+QPushButton#showpass_btn {
+    background-color: #3DC47E;
+    color: #0a1f12;
+    border: none;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 5px;
+    min-height: 12px;
+    max-height: 18px;
+}
+
+QPushButton#showpass_btn:hover {
+    background-color: #5DD898;
+}
+
+QPushButton#showpass_btn:pressed {
+    background-color: #2FAF6A;
+}
+
+/* =========================
+   STATUS BAR - BOTTOM DARK
+========================= */
+QStatusBar {
+    background-color: #0d1f14;
+    color: #7EEDB0;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-top: 1px solid #1e3d27;
+}
+
+QStatusBar::item {
+    border: none;
+}s</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>250</y>
+      <width>300</width>
+      <height>265</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/*QFrame{
+background-color: #DDEEE5;
+border: 2px solid white;
+border-radius: 30px solid black;
+}*/
+QFrame#frame {
+    background: rgba(26, 58, 46, 0.88);  /* ← semi-transparent dark green */
+    border-radius: 18px;
+    border: 2px solid #AAFFC7;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>40</y>
+       <width>100</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+background: transparent;
+color: #5E8B7E;
+font-size: 18px;
+font-weight: 600;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Username:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_name">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>70</y>
+       <width>191</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit#lineEdit_name {
+    background-color: rgba(255, 255, 255, 0.90);
+    border: 2px solid #AAFFC7;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-family: &quot;Segoe UI&quot;;
+    color: #1a3a2a;
+}
+
+QLineEdit#lineEdit_name:focus {
+    border: 2px solid #ffffff;
+    background-color: white;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Enter your name:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>110</y>
+       <width>94</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+background: transparent;
+color: #5E8B7E;
+font-size: 18px;
+font-weight: 600;
+}</string>
+     </property>
+     <property name="text">
+      <string>Password:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineedit_password">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>140</y>
+       <width>201</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit#lineedit_password {
+    background-color: rgba(255, 255, 255, 0.90);
+    border: 2px solid #AAFFC7;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-family: &quot;Segoe UI&quot;;
+    color: #1a3a2a;
+}
+
+QLineEdit#lineedit_password:focus {
+    border: 2px solid #ffffff;
+    background-color: white;
+}</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::EchoMode::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Enter password</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="login_btn">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>180</y>
+       <width>130</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#login_btn {
+    background: qlineargradient(
+        x1:0, y1:0, x2:0, y2:1,
+        stop:0 #AAFFC7,
+        stop:1 #5ecb8a
+    );
+    color: #0f2419;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: &quot;Segoe UI&quot;;
+    font-weight: bold;
+    min-width: 130px;
+    min-height: 36px;
+}
+
+QPushButton#login_btn:hover {
+    background-color: #c5ffe0;
+    color: #0a1f12;
+}
+
+QPushButton#login_btn:pressed {
+    background-color: #7ad4a8;
+}</string>
+     </property>
+     <property name="text">
+      <string>Login</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="showpass_btn">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>140</y>
+       <width>80</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>Show</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>20</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>MemoVault</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>721</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
