@@ -23,11 +23,11 @@
 
 | Login Screen | Home / Dashboard | New Entry |
 |:---:|:---:|:---:|
-| ![Login](assets/screenshots/login.jpeg) | ![mainwindow](assets/screenshots/mainwindow.jpeg) | ![New Entry](assets/screenshots/menu.jpeg) |
+| ![Login](login%20window.jpeg) | ![mainwindow](mainwindow.jpeg) | ![New Entry](menu.jpeg) |
 
  | About |
 |:---:|
- ![About](assets/screenshots/about.jpeg) |
+| ![About](about.jpeg) |
 
 ---
 
